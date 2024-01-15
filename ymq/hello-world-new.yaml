@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: Updated API
+  version: 1.0.0
+servers:
+- url: https://d5denvl6vilb0i4oh062.apigw.yandexcloud.net
+paths:
+  /results:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud-functions
+        function_id: d4e2sot42bvhm2141ece
+        service_account_id: ajeid92sq8li8pio8fls
+      operationId: function-for-user-requests
+  /check:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud-functions
+        function_id: d4emsdq4880a6j9760b3
+        service_account_id: ajeid92sq8li8pio8fls
+      operationId: add-url
